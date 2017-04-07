@@ -27,3 +27,6 @@
                  1. 阿三开了房间了看见  
 :book:  
 :one: :gift_heart:
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
