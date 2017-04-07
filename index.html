@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jd</title>
+    <style media="screen">
+      *{
+        padding: 0;
+        margin: 0px;
+      }
+      li{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      body{
+        background:  #f6f6f6;
+      }
+      .head{
+        height: 30px;
+        background: #e3e4e5;
+      }
+      .head-top{
+        width: 1190px;
+        height: 30px;
+        margin: auto;
+        line-height: 30px;
+      }
+      .head-top ul{
+        width: 570px;
+        height: 30px;
+        float: right;
+
+      }
+      .head-top ul li{
+        width: 65px;
+        height: 10px;
+        float: right;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 10px;
+        border-left: 1px solid #a6a9a9;
+        margin-right: 5px
+      }
+      .head-top ul li a,.head-top p ,.head-top a{
+        color: #a6a9a9;
+        font-size: 13px;
+      }
+      .head-top ul li a:hover,.head-top p:hover,.head-top a:hover{
+        color: red;
+        font-size: 13px;
+      }
+      .head-top a span{
+        color: red;
+
+      }
+      .head-top a{
+        float: right;
+        /*margin-right: 3px;*/
+      }
+      .head-top p{
+        margin-left: 186px;
+        padding-left: 32px;
+        background: url('./选区_020.png') no-repeat 17px 6px;
+        float: left;
+      }
+      .head-top ul li.xiaov{
+        background: url('./精灵图.png') no-repeat 67px -221px;
+        padding-right: 20px;
+      }
+
+      .head-center{
+        width: 1190px;
+        height: 136px;
+        margin: auto;
+        background: #f6f6f6;
+        position: relative;
+      }
+      .head-center-logo{
+        position: absolute;
+        top: -30px;
+      }
+      .head-center-text{
+        height: 34px;
+        width: 500px;
+        border: 1px solid red;
+        margin-left: 300px;
+        margin-top: 30px;
+        font-size: 20px;
+        outline: none;
+      }
+      .head-center-button{
+        height: 36px;
+        width: 50px;
+        margin-left: -5px;
+        position: relative;
+        top: 12px;
+        border: none;
+        background: red url('./精灵图.png') no-repeat 13px -114px;
+        outline: none;
+      }
+      .erwei{
+        width: 70px;
+        height: 68px;
+        float: right;
+      }
+      .shopping-car{
+        width: 188px;
+        height: 36px;
+        float: right;
+        background: #ffffff url('./精灵图.png') no-repeat 37px 9px;
+        position: relative;
+        top: 30px;
+        right: 39px;
+        border: 1px solid #e3e4e5;
+        text-align: center;
+        line-height: 36px;
+        font-size: 14px;
+        color: red;
+      }
+      .shopping-car-shuzi{
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background: red;
+        position: absolute;
+        top: 5px;
+        right: 40px;
+      }
+      .shopping-car-shuzi p{
+        position: relative;
+        color: white;
+        top: -10px;
+      }
+      .smail-link{
+        position: relative;
+        left: 301px;
+        top: 0px;
+      }
+      .smail-link a{
+        color: #a6a9a9;
+        font-size: 13px;
+        margin-left: 4px;
+      }
+      .smail-link a.red{
+        color: red;
+      }
+      .smail-link a:hover{
+        color: red;
+      }
+      .big-link{
+        position: relative;
+        bottom: -17px;
+        left: 200px;
+      }
+      .big-link a{
+        font-size: 16px;
+        font-weight: bold;
+        color: #555555;
+        margin-left: 20px;
+      }
+      .big-link a:hover{
+        color: red;
+      }
+      .big-link .shuxian{
+        color: #a6a9a9;
+      }
+      .big-link span.shuxian{
+        width: 20px;
+      }
+      .body-center{
+        width: 1190px;
+        height: 480px;
+        margin: auto;
+        position: relative;
+        top: 0px;
+        left:0px;
+      }
+      .body-center-left{
+        width: 186px;
+        height: 440px;
+        background: #6e6568;
+        margin-right: 15px;
+        float: left;
+        padding: 20px 0px;
+      }
+      .body-center-top{
+        width: 790px;
+        height: 340px;
+        background: url('./jd_电脑图片.jpg');
+        float: left;
+        margin: 0 auto;
+
+      }
+      .body-center-button{
+        width: 790px;
+        height: 126px;
+        float: left;
+        margin-top: 14px;
+        position: relative;
+      }
+      .body-center-right{
+        width: 186px;
+        height: 480px;
+        background: white;
+        float: right;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+      .body-center-button-hongxie{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+      .body-center-left ul{
+        height: 30px;
+        padding: 0px 10px;
+      }
+      .body-center-left ul:hover{
+        background: #a6a9a9;
+      }
+      .body-center-left ul li a{
+        color: white;
+        font-size: 14px;
+      }
+      .body-center-left ul li a:hover{
+        color: red;
+      }
+      .body-center-left ul li{
+        float: left;
+        color: white;
+      }
+      .body-center-right-top{
+        height: 115px;
+        position: relative;
+        border-bottom: 1px #e6e6e6 solid;
+      }
+      .body-center-right-top img{
+        width: 44px;
+        height: 44px;
+        border-radius: 44px;
+        position: relative;
+        top: 12px;
+        left: 8px;
+      }
+      .body-center-right-top p{
+        position: absolute;
+        left: 60px;
+        top: 12px;
+        font-size: 13px;
+        color: #a6a9a9;
+      }
+      .body-center-right-top-xinren,.body-center-right-top-huiyuan{
+        width: 72px;
+        height: 22px;
+        border: 2px solid red;
+        position: absolute;
+        font-size: 13px;
+      }
+      .body-center-right-top-xinren{
+        position: relative;
+        top: 21px;
+        left: 6px;
+      }
+      .body-center-right-top-huiyuan{
+        position:relative;
+        top: -5px;
+        left: 89px;
+        cursor: pointer;
+      }
+      .body-center-right-top-huiyuan:hover,.body-center-right-top-xinren:hover{
+        background: red;
+      }
+      .body-center-right-top-huiyuan p:hover,.body-center-right-top-xinren p:hover{
+        color: white;
+      }
+      .body-center-right-top-xinren p{
+        position: relative;
+        top: 1px;
+        left: 7px;
+        color: red;
+        cursor: pointer;
+      }
+      .body-center-right-top-huiyuan p{
+        position: absolute;
+        top: 1px;
+        left: 6px;
+        color: red;
+      }
+      .denglu,.zhuce{
+        position: relative;
+        top: 1px;
+        left: 11px;
+        color: black;
+        font-size: 13px;
+      }
+      .denglu:hover,.zhuce:hover{
+        color: red;
+      }
+      .body-center-right-body{
+        /*width: 186px;*/
+        height: 27px;
+        position: relative;
+        border-bottom: 1px #efefef solid;
+      }
+      .body-center-right-body ul li{
+        width: 51px;
+        height: 27px;
+        float: left;
+        font-size: 14px;
+        text-align: center;
+        line-height: 27px;
+        cursor: pointer;
+      }
+      .body-center-right-body ul li:hover{
+        border-bottom: 1px solid red;
+      }
+      .body-center-right-body a{
+        position: relative;
+        top: 2px;
+        left: 45px;
+        font-size: 14px;
+        color: black;
+      }
+      .body-center-right-body a:hover{
+        color: red;
+      }
+      .cuxiao{
+        border-right: 1px #efefef solid;
+      }
+      .body-center-right-body-foot{
+        height: 127px;
+        border-bottom: 1px #efefef solid;
+      }
+      .body-center-right-body-foot ul{
+        height: 87px;
+        width: 166px;
+        padding: 20px 10px;
+      }
+      .body-center-right-body-foot ul li{
+        height: 22px;
+      }
+      .body-center-right-body-foot ul li a{
+        color: #66666a;
+        font-size: 12px;
+      }
+      .body-center-right-body-foot ul li a:hover{
+        color: red;
+      }
+      .body-center-right-body-foot-end{
+        width: 185px;
+        height: 206px;
+        position: relative;
+      }
+      .body-center-right-body-foot-end ul li{
+        width:44.26px;
+        height: 67px;
+        float: left;
+        text-align: center;
+      }
+      .body-center-right-body-foot-end ul li a{
+        color: #66666a;
+        font-size: 13px;
+        position: relative;
+        top: 13px;
+      }
+      .body-center-right-body-foot-end ul li a:hover{
+        color: red;
+      }
+      .c_1{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -2px -82px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_2{
+        width: 22px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -1px -39px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_3{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -44px -81px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_4{
+        width: 24px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -88px 6px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_5{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -89px -37px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_6{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -2px 5px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_7{
+        width: 23px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -44px -39px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_8{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -89px -82px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_9{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -133px 6px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_10{
+        width: 21px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -134px -39px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_11{
+        width: 22px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -133px -82px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .c_12{
+        width: 23px;
+        height: 29px;
+        background: url('./jd_精灵图.png') no-repeat -45px 6px;
+        margin: auto;
+        position: relative;
+        top: 9px;
+      }
+      .xia{
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .you{
+        border-right: 1px solid #e7e7e7;
+      }
+      .jian{
+        background: url('./jian.png') no-repeat 28px 0px;
+      }
+      .re{
+        background: url('./re.png') no-repeat 30px 0px;
+      }
+      .miaosha{
+        width: 1190px;
+        height: 55px;
+        background: url('miaosha_beijing.png');
+        position: relative;
+        bottom: -486px;
+      }
+      .zhe{
+        width: 30px;
+        height: 27px;
+        background:url('./miaosha.png') no-repeat -194px -51px;
+      }
+      .xiaoche{
+        width: 47px;
+        height: 47px;
+        background: url('./miaosha.png') no-repeat 5px -37px;
+        position: relative;
+        top: -22px;
+        left: 30px;
+      }
+      .jingdong{
+        position: absolute;
+        top: 9px;
+        left: 72px;
+        color: white;
+        font-size: 25px;
+      }
+      .dijia{
+        color: white;
+        position: absolute;
+        top: 19px;
+        left: 179px;
+        font-size: 14px;
+      }
+      .kuang{
+        width: 20px;
+        height: 20px;
+        background: url('./miaosha.png') no-repeat -152px -40px;
+        position: absolute;
+        bottom: -48px;
+        left: 310px;
+        /*border: 1px solid white;*/
+       }
+       .time{
+         height: 55px;
+         width: 300px;
+         position: absolute;
+         bottom: -61px;
+         right: 0px;
+         line-height: 55px;
+       }
+       .dang{
+         float: left;
+         font-size: 14px;
+         color: white;
+       }
+       .time p{
+         float: left;
+         font-size: 14px;
+         color: white;
+       }
+       .time ul{
+         float: left;
+         height: 55px;
+         padding: 8px;
+       }
+       .time ul li{
+         width: 40px;
+         height: 36px;
+         background: #440106;
+         float: left;
+         /*margin-left: 5px;*/
+         color: #f90013;
+         line-height: 36px;
+         text-align: center;
+         font-size: 25px;
+         font-weight: bold;
+       }
+        .time ul li.dian{
+          width: 36px;
+          width: 10px;
+          color: #440106;
+          background: url('./miaosha_beijing.png');
+        }
+      .tuijian{
+        width: 1170px;
+        height: 205px;
+        padding: 10px;
+        background: #ffffff;
+        position: absolute;
+        bottom: -298px;
+      }
+      .tuijian ul{
+        width: 1000px;
+        height: 130px;
+        float: left;
+      }
+
+      .tuijian ul li{
+        width: 199px;
+        height: 205px;
+        float: left;
+        border-right: 1px solid #e7e7e7;
+        margin: 0 auto;
+      }
+      .tuijian ul li:hover{
+        position: relative;
+        top: 3px;
+        right: 3px;
+      }
+      .tuijian ul li img{
+        position: relative;
+        left: 33px;
+        top: -20px;
+      }
+      .tuijian ul li img:hover{
+        position: relative;
+        top: -21px;
+      }
+      .biaoqian{
+        width: 31px;
+        height: 40px;
+        /*border: 1px solid red;*/
+        position: relative;
+        left: 17px;
+        top: 2px;
+        z-index: 1;
+        background: url('./miaosha.png') no-repeat 0px 0px;
+      }
+      .xiatu{
+        width: 140px;
+        height: 20px;
+        background: red;
+        margin: auto;
+        position: relative;
+        top: -22px;
+        left: 0px;
+        background: url('miaosha.png') no-repeat -13px 0px;
+      }
+      .tuijian ul li p{
+        position: relative;
+        top: -14px;
+        left: 29px;
+        font-size: 12px;
+        color: #a8a8a8;
+      }
+      .tuijian ul li p a{
+        color: #a8a8a8;
+      }
+
+      .tuijian ul li p a:hover{
+        color: red;
+      }
+      .hongzi{
+        color: red;
+        font-size: 16px;
+        margin-right: 5px;
+        font-weight: bold;
+        text-decoration: line-through;
+      }
+      .xiaozi{
+        text-decoration: line-through;
+      }
+      .pinpai{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 180px;
+        height: 225px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="head-top">
+        <p>北京</p>
+        <ul>
+          <li><a href="#">京东手机</a></li>
+          <li class="xiaov"><a href="#">网站导航</a></li>
+          <li class="xiaov"><a href="#">客户服务</a></li>
+          <li><a href="#">企业采购</a></li>
+          <li><a href="#">京东会员</a></li>
+          <li class="xiaov"><a href="#">我的京东</a></li>
+          <li><a href="#">我的订单</a></li>
+        </ul>
+        <a href="#"><span>免费注册</span></a>
+        <a href="#">你好,请登录</a>
+      </div>
+    </div>
+    <div class="head-center">
+      <img class='head-center-logo' src="./logo.png"/>
+      <input class="head-center-text" type="text">
+
+      <input class='head-center-button' type="button">
+      <img class='erwei' src="./二维码.png"/>
+      <div class="shopping-car">
+          <p>我的购物车</p>
+          <div class="shopping-car-shuzi">
+            <p>
+             0
+            </p>
+          </div>
+      </div>
+      <div class="smail-link">
+        <a class="red" href="#">199减188</a>
+        <a href="#">领免息卷</a>
+        <a href="#">满199减100</a>
+        <a href="#">299减50</a>
+        <a href="#">一件9折</a>
+        <a href="#">鼠标</a>
+        <a href="#">手套男</a>
+        <a href="#">199减100</a>
+        <a href="#">男鞋冬季</a>
+      </div>
+      <div class="big-link">
+        <a href="#">秒杀</a>
+        <a href="#">优惠卷</a>
+        <a href="#">闪购</a>
+        <a href="#">拍卖</a>
+        <a class="shuxian" href="#">|</a>
+        <a href="#">服装城</a>
+        <a href="#">京东超市</a>
+        <a href="#">生鲜</a>
+        <a href="#">全球购</a>
+        <a class="shuxian" href="#">|</a>
+        <a href="#">京东金融</a>
+      </div>
+    </div>
+    <div class="body-center">
+      <div class="body-center-left">
+        <ul>
+          <li><a href="#">家用电器</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">手机</a> /&nbsp</li>
+          <li><a href="#">运营商</a> /&nbsp</li>
+          <li><a href="#">数码</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">电脑办公</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">家居</a> /&nbsp</li>
+          <li><a href="#">家具</a> /&nbsp</li>
+          <li><a href="#">家装</a> /&nbsp</li>
+          <li><a href="#">厨具</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">男装</a> /&nbsp</li>
+          <li><a href="#">女装</a> /&nbsp</li>
+          <li><a href="#">童装</a> /&nbsp</li>
+          <li><a href="#">内衣</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">个护化妆</a> /&nbsp</li>
+          <li><a href="#">清洁用品</a> /&nbsp</li>
+          <li><a href="#">宠物</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">箱鞋</a> /&nbsp</li>
+          <li><a href="#">箱包</a> /&nbsp</li>
+          <li><a href="#">珠宝</a> /&nbsp</li>
+          <li><a href="#">奢侈品</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">运动</a> /&nbsp</li>
+          <li><a href="#">户外</a> /&nbsp</li>
+          <li><a href="#">钟表</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">汽车</a> /&nbsp</li>
+          <li><a href="#">汽车用品</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">母婴</a> /&nbsp</li>
+          <li><a href="#">玩具用品</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">食品</a> /&nbsp</li>
+          <li><a href="#">酒类</a> /&nbsp</li>
+          <li><a href="#">生鲜</a> /&nbsp</li>
+          <li><a href="#">特产</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">医药保健</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">图书</a> /&nbsp</li>
+          <li><a href="#">音像</a> /&nbsp</li>
+          <li><a href="#">电子书</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">机票</a> /&nbsp</li>
+          <li><a href="#">酒店</a> /&nbsp</li>
+          <li><a href="#">旅游</a> /&nbsp</li>
+          <li><a href="#">生活</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">理财</a> /&nbsp</li>
+          <li><a href="#">众筹</a> /&nbsp</li>
+          <li><a href="#">白条</a> /&nbsp</li>
+          <li><a href="#">保险</a></li>
+        </ul>
+      </div>
+      <div class="body-center-top">
+
+      </div>
+      <div class="body-center-button">
+        <img src="./xiachi.png"/>
+        <img class="body-center-button-hongxie" src="hongxie.png"/>
+      </div>
+      <div class="body-center-right">
+        <div class="body-center-right-top">
+            <img src="./头像.jpg"/>
+            <p>
+            Hi,欢迎来到京东!
+            </p>
+            <a class="denglu" href="#">登录</a>
+            <a class="zhuce" href="#">注册</a>
+            <div class="body-center-right-top-xinren">
+              <p>
+                新人福利
+              </p>
+            </div>
+            <div class="body-center-right-top-huiyuan">
+              <p>
+                PLUS会员
+              </p>
+            </div>
+        </div>
+        <div class="body-center-right-body">
+          <ul>
+            <li class="cuxiao">促销</li>
+            <li>公告</li>
+          </ul>
+          <a href="#">更多</a>
+        </div>
+        <div class="body-center-right-body-foot">
+          <ul>
+            <li><a href="#">新年耍新机 满千减百</a></li>
+            <li><a href="#">图书每100减40 优惠卷限时..</a></li>
+            <li><a href="#">开年红包 抢1000元E卡</a></li>
+            <li><a href="#">每日享折扣 京东品质游</a></li>
+          </ul>
+        </div>
+        <div class="body-center-right-body-foot-end">
+        <ul>
+          <li class="xia you"><div class="c_1"></div><a href="#">话费</a></li>
+          <li class="xia you jian"><div class="c_2"></div><a href="#">机票</a></li>
+          <li class="xia you"><div class="c_3"></div><a href="#">酒店</a></li>
+          <li class="xia"><div class="c_4"></div><a href="#">游戏</a></li>
+          <li class="xia you"><div class="c_5"></div><a href="#">企业购</a></li>
+          <li class="xia you"><div class="c_6"></div><a href="#">加油卡</a></li>
+          <li class="xia you re"><div class="c_7"></div><a href="#">电影票</a></li>
+          <li class="xia"><div class="c_8"></div><a href="#">火车票</a></li>
+          <li class="you"><div class="c_9"></div><a href="#">众筹</a></li>
+          <li class="you"><div class="c_10"></div><a href="#">理财</a></li>
+          <li class="you"><div class="c_11"></div><a href="#">礼品卡</a></li>
+          <li><div class="c_12"></div><a href="#">白条</a></li>
+        </ul>
+      </div >
+      </div>
+
+    <div class="miaosha">
+      <div class="zhe">
+      </div>
+      <div class="xiaoche">
+      </div>
+      <p class="jingdong">京东秒杀</p>
+      <p class="dijia">总有你想不到的低价</p>
+    </div>
+    <div class="kuang">
+    </div>
+    <div class="time">
+        <p class="dang">当前场次</p>
+        <ul>
+          <li>20</li>
+          <li class="dian">:</li>
+          <li>17</li>
+          <li class="dian">:</li>
+          <li>02</li>
+        </ul>
+        <p>后结束抢购</p>
+    </div>
+    <div class="tuijian">
+      <ul>
+        <li><div class="biaoqian"></div><img src="./jiu.jpg"><div class="xiatu"></div><p><a href="#">【京东超时】好酒不贵</a></p><p><span>￥</span><span class="hongzi">166.00</span><span　class="xiaozi">￥298.00</span></p></li>
+        <li><div class="biaoqian"></div><img src="./bijiben.jpg"/><div class="xiatu"></div><p><a href="#">【京东超时】好酒不贵</a></p><p><span>￥</span><span class="hongzi">166.00</span><span　class="xiaozi">￥298.00</span></p></li>
+        <li><div class="biaoqian"></div><img src="./yashua.jpg" /><div class="xiatu"></div><p><a href="#">【京东超时】好酒不贵</a></p><p><span>￥</span><span class="hongzi">166.00</span><span　class="xiaozi">￥298.00</span></p></li>
+        <li><div class="biaoqian"></div><img src="./jiqiren.jpg"/><div class="xiatu"></div><p><a href="#">【京东超时】好酒不贵</a></p><p><span>￥</span><span class="hongzi">166.00</span><span　class="xiaozi">￥298.00</span></p></li>
+        <li><div class="biaoqian"></div><img src="./dianshi.jpg"/><div class="xiatu"></div><p><a href="#">【京东超时】好酒不贵</a></p><p><span>￥</span><span class="hongzi">166.00</span><span　class="xiaozi">￥298.00</span></p></li>
+      </ul>
+      <div class="pinpai">
+      <img src="./pinpai.jpg">
+    </div>
+  </div>
+  </body>
+</html>
